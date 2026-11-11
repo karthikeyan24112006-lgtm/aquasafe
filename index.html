@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AquaSafe</title>
+<style>
+body{margin:0;font-family:system-ui,sans-serif;background:linear-gradient(#0a84c6,#0b3f6e);color:#fff;min-height:100vh;overflow:hidden;text-align:center}
+h1{margin:20vh 16px 8px;font-size:34px}
+p{opacity:.9;margin:0 16px}
+a{display:inline-block;margin-top:24px;padding:12px 26px;background:#fff;color:#0a84c6;border-radius:30px;text-decoration:none;font-weight:700}
+.wave{position:fixed;bottom:0;left:0;width:200%;height:120px;background:rgba(255,255,255,.25);border-radius:45%;animation:w 6s linear infinite}
+.wave.b{height:100px;background:rgba(255,255,255,.4);animation-duration:9s;animation-direction:reverse}
+@keyframes w{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.bub{position:fixed;bottom:-20px;border-radius:50%;background:rgba(255,255,255,.35);animation:up linear infinite}
+@keyframes up{to{transform:translateY(-110vh)}}
+</style>
+</head>
+<body>
+<h1>💧 AquaSafe</h1>
+<p>Smart Water Complaint Portal</p>
+<a href="#">Report a Complaint</a>
+<div class="wave"></div><div class="wave b"></div>
+<script>
+for(let i=0;i<18;i++){
+  const b=document.createElement('div');b.className='bub';
+  const s=8+Math.random()*22;
+  b.style.cssText='width:'+s+'px;height:'+s+'px;left:'+Math.random()*100+'%;animation-duration:'+(6+Math.random()*8)+'s;animation-delay:'+Math.random()*6+'s';
+  document.body.appendChild(b);
+}
+</script>
+</body>
+</html>
